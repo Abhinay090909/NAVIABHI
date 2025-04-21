@@ -181,7 +181,8 @@ function ReflectionScreen({ userPolicy, finalPolicyPackage, participantInfo }) {
       const formData = new FormData();
       formData.append("report", blob, "CHALLENGE_Evaluation_Report.pdf");
 
-      await fetch("/api/send-report", {
+      await fetch("https://naviabhi2.vercel.app/api/send-report", {
+
         method: "POST",
         body: formData
       });
