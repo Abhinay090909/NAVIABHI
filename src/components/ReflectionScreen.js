@@ -181,7 +181,7 @@ function ReflectionScreen({ userPolicy, finalPolicyPackage, participantInfo }) {
       const formData = new FormData();
       formData.append("report", blob, "CHALLENGE_Evaluation_Report.pdf");
 
-      await fetch("http://localhost:5000/send-report", {
+      await fetch("/api/send-report", {
         method: "POST",
         body: formData
       });
